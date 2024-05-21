@@ -3,7 +3,8 @@ const state = () => ({
 });
 
 const getters = {
-
+  getCount: (state) => state.count,
+  getCountSum: (state) => (val) => Math.abs(state.count + val),
 };
 
 const actions = {

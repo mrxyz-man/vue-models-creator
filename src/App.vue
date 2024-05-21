@@ -14,8 +14,11 @@ export default {
     };
   },
   created() {
-    console.log(new Role());
+    const role = new Role();
+    console.log(role);
     console.log(new User());
+    console.log(role.count);
+    console.log(role.countSum(10));
   },
 };
 </script>

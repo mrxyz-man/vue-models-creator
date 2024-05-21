@@ -19,6 +19,14 @@ export default class Role extends Model {
     };
   }
 
+  get count() {
+    return this.$self().store.getters.getCount;
+  }
+
+  countSum(val) {
+    return this.$self().store.getters.getCountSum(val);
+  }
+
   static get api() {
     return super.registerApi(api, {
       axios: Vue.prototype.$api.base,
