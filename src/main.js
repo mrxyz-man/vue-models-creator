@@ -1,9 +1,10 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
 import VueGeneratorApi from 'vue-generator-api';
 import App from './App.vue';
 
-Vue.use(Vuex);
+import store from './plugins/store';
+import auth from './plugins/auth';
+
 Vue.use(VueGeneratorApi, {
   api: {
     base: {
@@ -17,10 +18,7 @@ Vue.use(VueGeneratorApi, {
   },
 });
 
-const store = new Vuex.Store({});
-
-Vue.store = store;
-Vue.prototype.$store = store;
+Vue.use(auth);
 
 export default new Vue({
   el: '#app',

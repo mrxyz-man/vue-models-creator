@@ -1,5 +1,7 @@
 <template lang="pug">
-  div Hello
+  div
+    p {{ $auth.loggedIn ? 'Авторизован' : 'Не авторизован' }}
+    button(@click="login") login
 </template>
 
 <script>
@@ -13,12 +15,15 @@ export default {
       Role,
     };
   },
-  created() {
-    const role = new Role();
-    console.log(role);
-    console.log(new User());
-    console.log(role.count);
-    console.log(role.countSum(10));
+  methods: {
+    login() {
+      const data = {
+        phone: '',
+        password: '',
+        code: '',
+      };
+      this.$auth.login(data);
+    },
   },
 };
 </script>
