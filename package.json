@@ -1,6 +1,6 @@
 {
   "name": "vue-models-creator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/vue-models-creator.umd.cjs",
@@ -28,7 +28,7 @@
     "vite": "^4.4.5",
     "vue": "^2.7.16",
     "vue-eslint-parser": "^9.4.2",
-    "vue-generator-api": "^1.0.2",
+    "vue-generator-api": "latest",
     "vuex": "^3.6.2"
   }
 }
