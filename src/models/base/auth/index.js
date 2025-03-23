@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 import { Model } from '../../../../lib';
-// import User from '../user';
+import User from '../user';
 
 import store from './store';
 
@@ -13,7 +13,7 @@ export default class Auth extends Model {
   }
 
   async login() {
-    // const { item } = await User.api.login(...args);
+    await User.api.login();
 
     this.$self().toggleLoggedIn();
   }

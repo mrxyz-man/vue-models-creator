@@ -14,6 +14,19 @@ Vue.use(VueGeneratorApi, {
           Accept: 'application/json, text/plain, */*',
         },
       },
+      hooks: {
+        onError: (response) => {
+          console.log(response.message);
+        },
+      },
+    },
+    test: {
+      baseURL: 'https://xn--e1afnjf.xn--c1akev.xn--p1ai/api/',
+      headers: {
+        common: {
+          Accept: 'application/json, text/plain, */*',
+        },
+      },
     },
   },
 });
