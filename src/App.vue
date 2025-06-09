@@ -19,15 +19,19 @@ export default {
   },
   methods: {
     login() {
-      const data = {
-        phone: '',
-        password: '',
-        code: '',
+      const payload = {
+        data: {
+          phone: '',
+          password: '',
+          code: '',
+        },
+        params: { test: 132 },
       };
-      this.$auth.login(data);
+      Faculty.api.create(payload);
+      this.$auth.login(payload);
     },
     async test() {
-      const resp = await Faculty.api.list();
+      const resp = await Faculty.api.list({});
       console.log(resp);
     },
   },

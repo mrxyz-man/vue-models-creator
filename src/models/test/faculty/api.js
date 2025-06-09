@@ -7,6 +7,10 @@ const methods = {
     method: 'get',
     extendUrl: (url) => `${url}/faculties/all`,
   },
+  create: {
+    method: 'post',
+    extendUrl: (url) => `${url}/faculties/all`,
+  },
 };
 
 export default (model, axios) => new ModelAPICreator(
