@@ -1,6 +1,6 @@
 {
   "name": "vue-models-creator",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/vue-models-creator.umd.cjs",
